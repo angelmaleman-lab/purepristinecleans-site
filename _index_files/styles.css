@@ -1,0 +1,191 @@
+:root{
+  --bg:#f7fbff;
+  --card:#ffffff;
+  --muted:#5b6b7c;
+  --text:#0b1220;
+  --accent:#17c3be;
+  --accent2:#2bb3ff;
+  --border:rgba(11,18,32,.10);
+  --shadow:0 18px 60px rgba(11,18,32,.10);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+a{color:inherit}
+.container{max-width:1100px;margin:0 auto;padding:0 18px}
+.nav{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:saturate(150%) blur(12px);
+  background:rgba(255,255,255,.85);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo{
+  width:38px;height:38px;border-radius:12px;
+  background:radial-gradient(circle at 30% 30%, var(--accent2), var(--accent));
+  box-shadow:0 8px 24px rgba(79,140,255,.25);
+}
+.brand strong{font-size:16px;letter-spacing:.2px}
+.nav-links{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.nav-links a{opacity:.92;text-decoration:none;font-weight:600;font-size:14px}
+.nav-links a:hover{opacity:1}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:12px 14px;border-radius:14px;border:1px solid var(--border);
+  text-decoration:none;font-weight:700;
+}
+.btn.primary{background:linear-gradient(135deg,var(--accent),#7dd3ff);color:#052032;border:none}
+.btn.ghost{background:rgba(255,255,255,.03)}
+.hero{padding:54px 0 24px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;align-items:stretch}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.kicker{display:inline-flex;align-items:center;gap:10px;color:var(--muted);font-weight:700;font-size:13px}
+.kicker .pill{padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.03)}
+h1{margin:14px 0 12px;font-size:44px;line-height:1.05;letter-spacing:-.6px}
+@media (max-width:520px){h1{font-size:34px}}
+.lede{color:var(--muted);font-size:18px;max-width:58ch}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+.card h3{margin:0 0 8px}
+.small{color:var(--muted);font-size:14px;margin:0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:900px){.grid3{grid-template-columns:1fr}}
+.section{padding:26px 0}
+.section h2{margin:0 0 10px;font-size:26px}
+.section p{margin:0 0 14px;color:var(--muted)}
+.list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.list li{padding:12px 12px;border-radius:16px;border:1px solid var(--border);background:rgba(255,255,255,.02)}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.badge{padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.02);color:var(--muted);font-weight:700;font-size:12px}
+.footer{padding:28px 0 40px;border-top:1px solid var(--border);margin-top:24px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px}
+@media (max-width:900px){.footer-grid{grid-template-columns:1fr}}
+.footer a{text-decoration:none;color:var(--muted);font-weight:600}
+.footer a:hover{color:var(--text)}
+hr.sep{border:none;border-top:1px solid var(--border);margin:16px 0}
+.input, textarea{
+  width:100%;padding:12px 12px;border-radius:14px;border:1px solid var(--border);
+  background:rgba(255,255,255,.02);color:var(--text);outline:none
+}
+label{display:block;font-weight:800;font-size:13px;margin:10px 0 6px;color:var(--muted)}
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:720px){form .row{grid-template-columns:1fr}}
+.note{font-size:12px;color:var(--muted)}
+.table{width:100%;border-collapse:separate;border-spacing:0 10px}
+.table td{padding:12px;border:1px solid var(--border);background:rgba(255,255,255,.02)}
+.table td:first-child{border-radius:16px 0 0 16px}
+.table td:last-child{border-radius:0 16px 16px 0}
+
+.hero-media{border-radius:22px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow)}
+.hero-media img{display:block;width:100%;height:100%;max-height:420px;object-fit:cover}
+.feature-img{width:100%;height:160px;object-fit:cover;border-radius:16px;border:1px solid var(--border)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}
+@media (max-width:900px){.split{grid-template-columns:1fr}}
+.soft{background:linear-gradient(180deg,rgba(43,179,255,.10),rgba(23,201,100,.06));border:1px solid var(--border)}
+.hero-wrap{position:relative;padding:56px 0 34px}
+.hero-bg{position:absolute;inset:0;overflow:hidden}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,22,28,.72) 0%, rgba(3,22,28,.38) 55%, rgba(3,22,28,.25) 100%)}
+.hero-inner{position:relative}
+.hero-grid2{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;align-items:stretch}
+@media (max-width:900px){.hero-grid2{grid-template-columns:1fr}}
+.hero-panel{color:#fff;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);box-shadow:0 18px 60px rgba(0,0,0,.20)}
+.hero-panel .lede,.hero-panel .small{color:rgba(255,255,255,.86)}
+.form-card{background:#fff;border:1px solid var(--border);box-shadow:var(--shadow)}
+.form-card button.btn{width:100%}
+.hero-video{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden}
+.hero-video iframe{width:100vw;height:56.25vw;min-height:100vh;min-width:177.77vh;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.section.softband{background:linear-gradient(180deg,rgba(23,195,190,.12),rgba(43,179,255,.08));border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+
+
+/* --- Visibility + conversion overrides --- */
+.btn.primary,
+button.btn.primary,
+.hcp-button.btn.primary{
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border: none !important;
+  font-weight: 700 !important;
+  text-shadow: none !important;
+}
+.btn.primary:hover,
+button.btn.primary:hover,
+.hcp-button.btn.primary:hover{
+  filter: brightness(0.92);
+  color: #ffffff !important;
+}
+
+/* Make ghost buttons readable on dark hero panel */
+.hero-panel .btn.ghost{
+  border: 1px solid rgba(255,255,255,.55) !important;
+  color: #ffffff !important;
+  background: rgba(255,255,255,.08) !important;
+}
+.hero-panel .btn.ghost:hover{
+  background: rgba(255,255,255,.16) !important;
+  border-color: rgba(255,255,255,.75) !important;
+}
+
+/* Form inputs contrast */
+.form-card .input,
+.form-card input,
+.form-card textarea{
+  background:#ffffff;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.form-card label{
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Ensure buttons show pointer */
+button.btn, .btn{cursor:pointer}
+
+/* Small mobile tweak to keep CTA visible */
+@media (max-width: 900px){
+  .hero-actions{display:flex;flex-wrap:wrap;gap:10px}
+  .hero-actions .btn{flex:1 1 auto;min-width: 160px}
+}
+
+
+/* Ensure hero background layers never block clicks on content below */
+.hero-bg, .hero-overlay, .hero-video, .hero-video iframe{
+  pointer-events:none !important;
+}
+
+
+/* Ensure Housecall Pro "Book online" button is always visible in light sections/cards */
+.hcp-button{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-height:44px !important;
+  background: var(--accent) !important;
+  color:#ffffff !important;
+  border: none !important;
+  font-weight: 700 !important;
+  text-decoration:none !important;
+}
+.hcp-button:hover{
+  filter: brightness(0.92);
+  color:#ffffff !important;
+}
+
+/* If the HCP button is using ghost styles, override them */
+.btn.ghost.hcp-button,
+.hero-panel .btn.ghost.hcp-button,
+.card .btn.ghost.hcp-button{
+  background: var(--accent) !important;
+  color:#ffffff !important;
+  border: none !important;
+}
+
+/* call button click fix */
+.btn, a.btn{pointer-events:auto !important;}
